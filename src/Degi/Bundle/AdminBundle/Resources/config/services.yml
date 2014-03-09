@@ -1,0 +1,7 @@
+parameters:
+#    degi_admin.example.class: Degi\Bundle\AdminBundle\Example
+
+services:
+#    degi_admin.example:
+#        class: %degi_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

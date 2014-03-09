@@ -1,0 +1,7 @@
+parameters:
+#    degi_login.example.class: Degi\Bundle\LoginBundle\Example
+
+services:
+#    degi_login.example:
+#        class: %degi_login.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

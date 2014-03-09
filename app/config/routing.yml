@@ -1,0 +1,26 @@
+degi_login:
+    resource: "@DegiLoginBundle/Resources/config/routing.yml"
+    prefix:   /
+
+degi_user:
+    resource: "@DegiUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+degi_admin:
+    resource: "@DegiAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    pattern: /login
+    defaults: { _controller: DegiLoginBundle:defaults:index }
+ 
+login_check:
+    pattern: /login_check
+ 
+logout:
+    pattern: /logout
+
