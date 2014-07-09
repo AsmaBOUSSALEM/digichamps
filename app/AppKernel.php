@@ -16,10 +16,26 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Digi\AdminBundle\AdminBundle(),
-            new Degi\Bundle\AdminBundle\DegiAdminBundle(),
-            new Degi\Bundle\UserBundle\DegiUserBundle(),
-            new Degi\Bundle\LoginBundle\DegiLoginBundle(),
+            new digit\synergyBundle\digitsynergyBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
+            // Add your dependencies
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+           
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            //...
+
+            // If you haven't already, add the storage bundle
+            // This example uses SonataDoctrineORMAdmin but
+            // it works the same with the alternatives
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+
+            // Then add SonataAdminBundle
+            new Sonata\AdminBundle\SonataAdminBundle()
+            
+            
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

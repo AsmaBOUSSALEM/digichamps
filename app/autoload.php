@@ -2,7 +2,7 @@
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Composer\Autoload\ClassLoader;
-
+use Ivory\GoogleMap;
 /**
  * @var ClassLoader $loader
  */

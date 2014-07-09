@@ -1,3 +1,6 @@
+ <link href="{{asset('css/offCanvas.css')}}" rel="stylesheet">
+<link href="{{asset('css/mine.css')}}" rel="stylesheet">
+
 {# Widgets #}
 
 {% block form_widget %}
@@ -13,7 +16,9 @@
 {% block form_widget_simple %}
 {% spaceless %}
     {% set type = type|default('text') %}
-    <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+     <div class="form-group">
+    <input type="{{ type }}" style="width:50%" class="form-control" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+    </div>
 {% endspaceless %}
 {% endblock form_widget_simple %}
 
@@ -67,7 +72,7 @@
 
 {% block choice_widget_collapsed %}
 {% spaceless %}
-    {% if required and empty_value is none and not empty_value_in_choices %}
+    {% if required and empty_value is none and not empty_value_in_choices and not multiple %}
         {% set required = false %}
     {% endif %}
     <select {{ block('widget_attributes') }}{% if multiple %} multiple="multiple"{% endif %}>
@@ -226,7 +231,9 @@
     {% if label is empty %}
         {% set label = name|humanize %}
     {% endif %}
-    <button type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
+     <div class="form-group">
+    <button type="{{ type|default('button') }}" class="btn btn-default"  {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
+    </div>
 {% endspaceless %}
 {% endblock button_widget %}
 
